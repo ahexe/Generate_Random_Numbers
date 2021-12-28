@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>App number 2 with Vue</h1>
+    </header>
+    <section id="randomNumber">
+      <h2>Random Numbers</h2>
+      <div>
+        <h3>Integer</h3>
+        <input
+          type="number"
+          id="intNum1"
+          placeholder="Min"
+          v-on:input="createIntNumber"
+        />
+        <input
+          type="number"
+          id="intNum2"
+          placeholder="Max"
+          v-on:input="createIntNumber"
+        />
+        <button v-on:click="createIntNumber">Refresh</button>
+      </div>
+      <div>
+        <h3>Float</h3>
+        <input
+          type="number"
+          id="floatNum1"
+          placeholder="Min"
+          v-on:input="createFloatNumber"
+        />
+        <input
+          type="number"
+          id="floatNum2"
+          placeholder="Max"
+          v-on:input="createFloatNumber"
+        />
+        <button v-on:click="createFloatNumber">Refresh</button>
+      </div>
+      <p>{{ randomNum }}</p>
+    </section>
+  </body>
+</html>
